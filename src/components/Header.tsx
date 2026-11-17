@@ -4,7 +4,7 @@ import { NAV } from "@/lib/site";
 
 export function Header() {
   return (
-    <header className="sticky top-0 z-40 bg-slate-950/85 backdrop-blur">
+    <header className="sticky top-0 z-40 bg-slate-950">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-2 lg:px-8">
         <Link href="/" aria-label="Tropa de Leads — página inicial">
           <Image src="/logo.png" alt="Tropa de Leads" width={200} height={80} className="h-20 w-auto mix-blend-screen" priority />
