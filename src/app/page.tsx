@@ -3,6 +3,7 @@ import Link from "next/link";
 import { services } from "@/content/services";
 import { WhatsAppButton, FinalCta } from "@/components/Cta";
 import { GoogleBadge } from "@/components/GoogleBadge";
+import { Reviews } from "@/components/Reviews";
 
 const problems = [
   "Sua empresa não aparece bem no Google.",
@@ -131,6 +132,8 @@ export default function Home() {
           </ul>
         </div>
       </section>
+
+      <Reviews />
 
       <FinalCta
         title="Vamos conversar sobre a presença digital da sua empresa?"
