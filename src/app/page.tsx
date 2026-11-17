@@ -4,6 +4,7 @@ import { services } from "@/content/services";
 import { WhatsAppButton, FinalCta } from "@/components/Cta";
 import { GoogleBadge } from "@/components/GoogleBadge";
 import { Reviews } from "@/components/Reviews";
+import { Testimonials } from "@/components/Testimonials";
 
 const problems = [
   "Sua empresa não aparece bem no Google.",
@@ -132,6 +133,8 @@ export default function Home() {
           </ul>
         </div>
       </section>
+
+      <Testimonials />
 
       <Reviews />
 
