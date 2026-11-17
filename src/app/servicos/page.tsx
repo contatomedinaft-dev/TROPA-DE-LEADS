@@ -18,15 +18,15 @@ export default function ServicosPage() {
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <Breadcrumbs items={[{ label: "Serviços", href: "/servicos/" }]} />
           <h1 className="mt-8 text-3xl font-bold lg:text-5xl">Serviços para empresas que querem crescer</h1>
-          <p className="mt-5 max-w-3xl text-lg text-slate-300">
+          <p className="mt-5 max-w-3xl text-lg text-slate-700">
             Estratégia, Google, anúncios, conteúdo, imagem e tecnologia integrados para gerar visibilidade e oportunidades comerciais.
           </p>
           <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
             {services.map((s) => (
-              <Link key={s.slug} href={`/servicos/${s.slug}/`} className="group flex flex-col rounded-2xl bg-white/5 p-6 transition hover:border-slate-600">
+              <Link key={s.slug} href={`/servicos/${s.slug}/`} className="group flex flex-col rounded-2xl bg-white shadow-sm p-6 transition hover:border-slate-600">
                 <h2 className="text-base font-bold">{s.name}</h2>
-                <p className="mt-3 flex-grow text-sm leading-relaxed text-slate-400">{s.short}</p>
-                <span className="mt-6 text-sm font-semibold text-blue-400 group-hover:underline">Ver detalhes →</span>
+                <p className="mt-3 flex-grow text-sm leading-relaxed text-slate-600">{s.short}</p>
+                <span className="mt-6 text-sm font-semibold text-blue-700 group-hover:underline">Ver detalhes →</span>
               </Link>
             ))}
           </div>

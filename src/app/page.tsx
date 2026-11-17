@@ -57,7 +57,7 @@ export default function Home() {
           <h2 className="text-3xl font-bold lg:text-4xl">Problemas que resolvemos</h2>
           <ul className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
             {problems.map((p) => (
-              <li key={p} className="rounded-2xl bg-white/5 p-7 text-lg leading-relaxed text-slate-100">{p}</li>
+              <li key={p} className="rounded-2xl bg-white shadow-sm p-7 text-lg leading-relaxed text-slate-700">{p}</li>
             ))}
           </ul>
         </div>
@@ -68,10 +68,10 @@ export default function Home() {
           <h2 className="text-3xl font-bold lg:text-4xl">Nossas soluções</h2>
           <div className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
             {services.map((s) => (
-              <Link key={s.slug} href={`/servicos/${s.slug}/`} className="group flex flex-col rounded-2xl bg-white/5 p-7 transition hover:bg-white/10">
+              <Link key={s.slug} href={`/servicos/${s.slug}/`} className="group flex flex-col rounded-2xl bg-white shadow-sm p-7 transition hover:shadow-md">
                 <h3 className="text-lg font-bold">{s.name}</h3>
-                <p className="mt-3 flex-grow text-base leading-relaxed text-slate-300">{s.short}</p>
-                <span className="mt-6 font-semibold text-sky-300 group-hover:underline">Saiba mais →</span>
+                <p className="mt-3 flex-grow text-base leading-relaxed text-slate-700">{s.short}</p>
+                <span className="mt-6 font-semibold text-blue-700 group-hover:underline">Saiba mais →</span>
               </Link>
             ))}
           </div>
@@ -91,14 +91,14 @@ export default function Home() {
           </div>
           <div>
             <h2 className="text-3xl font-bold lg:text-4xl">Quem somos</h2>
-            <div className="mt-6 space-y-5 text-lg leading-relaxed text-slate-300">
+            <div className="mt-6 space-y-5 text-lg leading-relaxed text-slate-700">
               <p>Somos especialistas em marketing digital focados em um único objetivo: trazer resultados reais para o seu negócio.</p>
               <p>Com anos de experiência no mercado, entendemos que curtidas não pagam boletos. Por isso, nossa metodologia é baseada em conversão, unindo tráfego pago, conteúdo estratégico e otimização para transformar desconhecidos em clientes.</p>
               <p>Se você busca uma parceria transparente, focada em crescimento e previsibilidade, você está no lugar certo.</p>
             </div>
             <div className="mt-8 flex flex-wrap items-center gap-6">
               <GoogleBadge />
-              <Link href="/sobre/" className="font-semibold text-sky-300 hover:underline">Conheça nossa atuação →</Link>
+              <Link href="/sobre/" className="font-semibold text-blue-700 hover:underline">Conheça nossa atuação →</Link>
             </div>
           </div>
         </div>
@@ -110,10 +110,10 @@ export default function Home() {
           <ol className="mt-12 space-y-8">
             {process.map(([t, d], i) => (
               <li key={t} className="flex gap-6">
-                <span className="flex h-12 w-12 flex-none items-center justify-center rounded-full bg-blue-600 text-lg font-bold" aria-hidden>{i + 1}</span>
+                <span className="flex h-12 w-12 flex-none items-center justify-center rounded-full bg-blue-600 text-lg font-bold text-white" aria-hidden>{i + 1}</span>
                 <div>
-                  <h3 className="text-xl font-semibold text-white">{t}</h3>
-                  <p className="mt-1 text-lg text-slate-300">{d}</p>
+                  <h3 className="text-xl font-semibold text-slate-950">{t}</h3>
+                  <p className="mt-1 text-lg text-slate-700">{d}</p>
                 </div>
               </li>
             ))}
@@ -126,7 +126,7 @@ export default function Home() {
           <h2 className="text-3xl font-bold lg:text-4xl">Por que a Tropa de Leads</h2>
           <ul className="mt-10 space-y-5">
             {differentials.map((d) => (
-              <li key={d} className="flex gap-4 text-lg text-slate-200"><span className="mt-1 text-sky-300" aria-hidden>✓</span>{d}</li>
+              <li key={d} className="flex gap-4 text-lg text-slate-700"><span className="mt-1 text-blue-700" aria-hidden>✓</span>{d}</li>
             ))}
           </ul>
         </div>

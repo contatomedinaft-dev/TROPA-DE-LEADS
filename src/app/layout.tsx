@@ -26,12 +26,12 @@ export const metadata: Metadata = {
   robots: { index: true, follow: true },
 };
 
-export const viewport: Viewport = { themeColor: "#020617" };
+export const viewport: Viewport = { themeColor: "#06143a" };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="pt-BR" className={inter.variable}>
-      <body className="bg-slate-950 font-sans text-slate-50 antialiased">
+      <body className="bg-[#f4f5f7] font-sans text-slate-900 antialiased">
         <JsonLd
           data={{
             "@context": "https://schema.org",

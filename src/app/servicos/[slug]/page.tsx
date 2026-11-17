@@ -62,7 +62,7 @@ export default async function ServicePage({ params }: { params: Promise<Params> 
         <div className="mx-auto max-w-4xl px-6 lg:px-8">
           <Breadcrumbs items={[{ label: "Serviços", href: "/servicos/" }, { label: s.name, href: `/servicos/${s.slug}/` }]} />
           <h1 className="mt-8 text-3xl font-bold leading-tight lg:text-5xl">{s.h1}</h1>
-          <p className="mt-6 text-lg leading-relaxed text-slate-300">{s.intro}</p>
+          <p className="mt-6 text-lg leading-relaxed text-slate-700">{s.intro}</p>
           <div className="mt-8">
             <WhatsAppButton message={s.whatsappMessage} label="Solicitar orçamento" where={`servico-${s.slug}-topo`} />
           </div>
@@ -73,14 +73,14 @@ export default async function ServicePage({ params }: { params: Promise<Params> 
         <div className="mx-auto grid max-w-4xl gap-12 px-6 md:grid-cols-2 lg:px-8">
           <div>
             <h2 className="text-xl font-bold">Problemas que esse serviço resolve</h2>
-            <ul className="mt-5 space-y-3 text-slate-300">
-              {s.problems.map((p) => (<li key={p} className="flex gap-3"><span className="text-sky-300" aria-hidden>•</span>{p}</li>))}
+            <ul className="mt-5 space-y-3 text-slate-700">
+              {s.problems.map((p) => (<li key={p} className="flex gap-3"><span className="text-blue-700" aria-hidden>•</span>{p}</li>))}
             </ul>
           </div>
           <div>
             <h2 className="text-xl font-bold">Benefícios para a empresa</h2>
-            <ul className="mt-5 space-y-3 text-slate-300">
-              {s.benefits.map((b) => (<li key={b} className="flex gap-3"><span className="text-green-400" aria-hidden>✓</span>{b}</li>))}
+            <ul className="mt-5 space-y-3 text-slate-700">
+              {s.benefits.map((b) => (<li key={b} className="flex gap-3"><span className="text-green-600" aria-hidden>✓</span>{b}</li>))}
             </ul>
           </div>
         </div>
@@ -91,9 +91,9 @@ export default async function ServicePage({ params }: { params: Promise<Params> 
           <h2 className="text-2xl font-bold">O que está incluído</h2>
           <dl className="mt-8 grid gap-6 md:grid-cols-2">
             {s.scope.map((x) => (
-              <div key={x.title} className="rounded-2xl bg-white/5 p-6">
-                <dt className="font-semibold text-white">{x.title}</dt>
-                <dd className="mt-2 text-sm leading-relaxed text-slate-400">{x.text}</dd>
+              <div key={x.title} className="rounded-2xl bg-white shadow-sm p-6">
+                <dt className="font-semibold text-slate-950">{x.title}</dt>
+                <dd className="mt-2 text-sm leading-relaxed text-slate-600">{x.text}</dd>
               </div>
             ))}
           </dl>
@@ -106,17 +106,17 @@ export default async function ServicePage({ params }: { params: Promise<Params> 
           <ol className="mt-8 space-y-6">
             {s.steps.map((st, i) => (
               <li key={st.title} className="flex gap-5">
-                <span className="flex h-9 w-9 flex-none items-center justify-center rounded-full bg-blue-600 text-sm font-bold" aria-hidden>{i + 1}</span>
+                <span className="flex h-9 w-9 flex-none items-center justify-center rounded-full bg-blue-600 text-sm font-bold text-white" aria-hidden>{i + 1}</span>
                 <div>
                   <h3 className="font-semibold">{st.title}</h3>
-                  <p className="mt-1 text-slate-400">{st.text}</p>
+                  <p className="mt-1 text-slate-600">{st.text}</p>
                 </div>
               </li>
             ))}
           </ol>
           <h2 className="mt-14 text-2xl font-bold">Diferenciais da {SITE.name}</h2>
-          <ul className="mt-6 space-y-3 text-slate-300">
-            {s.differentials.map((d) => (<li key={d} className="flex gap-3"><span className="text-blue-400" aria-hidden>✓</span>{d}</li>))}
+          <ul className="mt-6 space-y-3 text-slate-700">
+            {s.differentials.map((d) => (<li key={d} className="flex gap-3"><span className="text-blue-700" aria-hidden>✓</span>{d}</li>))}
           </ul>
         </div>
       </section>
@@ -124,11 +124,11 @@ export default async function ServicePage({ params }: { params: Promise<Params> 
       <section className="py-16">
         <div className="mx-auto max-w-3xl px-6 lg:px-8">
           <h2 className="text-2xl font-bold">Perguntas frequentes</h2>
-          <div className="mt-8 divide-y divide-white/10">
+          <div className="mt-8 divide-y divide-slate-200">
             {s.faq.map((f) => (
               <details key={f.q} className="group py-5">
-                <summary className="cursor-pointer list-none font-semibold text-white">{f.q}</summary>
-                <p className="mt-3 leading-relaxed text-slate-400">{f.a}</p>
+                <summary className="cursor-pointer list-none font-semibold text-slate-950">{f.q}</summary>
+                <p className="mt-3 leading-relaxed text-slate-600">{f.a}</p>
               </details>
             ))}
           </div>

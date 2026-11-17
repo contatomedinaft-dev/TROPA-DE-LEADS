@@ -2,11 +2,11 @@
 
 @theme {
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
-  /* Paleta azul-marinho: substitui os cinzas-azulados padrão */
+  /* Azul-marinho da marca (menu, topo, chamada final e rodapé) */
   --color-slate-950: #06143a;
   --color-slate-900: #0a1d4e;
   --color-slate-800: #11296a;
-  --color-slate-700: #1c3a84;
+  --color-slate-700: #2b3d66; /* texto secundário legível sobre o fundo claro */
 }
 
 html {
@@ -14,7 +14,7 @@ html {
   scroll-behavior: smooth;
 }
 body {
-  background: linear-gradient(180deg, #06143a 0%, #0a1d4e 55%, #06143a 100%);
-  background-attachment: fixed;
+  background: #f4f5f7; /* cinza bem claro, quase branco */
+  color: #0a1d4e;
 }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
