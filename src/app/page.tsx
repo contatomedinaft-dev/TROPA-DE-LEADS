@@ -35,11 +35,9 @@ const fold = "flex min-h-[85vh] items-center py-24";
 export default function Home() {
   return (
     <>
-      <section className="relative flex min-h-[88vh] items-center overflow-hidden py-24">
-        <Image src="/hero-bg.jpg" alt="" fill priority sizes="100vw" className="-scale-x-100 object-cover object-center" />
-        <div className="absolute inset-0 bg-slate-950/80 lg:bg-gradient-to-r lg:from-slate-950 lg:via-slate-950/70 lg:to-transparent" />
-        <div className="relative mx-auto w-full max-w-7xl px-6 lg:px-8">
-          <div className="max-w-2xl">
+      <section className="relative overflow-hidden bg-gradient-to-br from-slate-950 via-slate-900 to-slate-800">
+        <div className="mx-auto grid max-w-7xl items-end gap-0 px-6 pt-14 lg:min-h-[88vh] lg:grid-cols-2 lg:items-center lg:gap-10 lg:px-8 lg:pt-0">
+          <div className="max-w-2xl pb-10 lg:py-24">
             <h1 className="text-4xl font-bold leading-tight tracking-tight text-white lg:text-6xl">
               Mais visibilidade, mais oportunidades e{" "}
               <span className="bg-gradient-to-r from-sky-300 to-blue-400 bg-clip-text text-transparent">mais clientes</span> para sua empresa.
@@ -50,6 +48,18 @@ export default function Home() {
             <div className="mt-10">
               <WhatsAppButton message="Olá! Quero mais clientes para minha empresa. Podemos conversar?" label="Quero conversar sobre minha empresa" where="hero" />
             </div>
+          </div>
+          <div className="relative mx-auto flex w-full max-w-sm items-end justify-center lg:max-w-none lg:self-end">
+            <div aria-hidden className="absolute inset-x-8 bottom-0 top-10 rounded-full bg-blue-500/25 blur-3xl" />
+            <Image
+              src="/thiago-hero.webp"
+              alt="Thiago Medina, fundador da Tropa de Leads"
+              width={1080}
+              height={1350}
+              priority
+              sizes="(min-width: 1024px) 560px, (min-width: 640px) 384px, 90vw"
+              className="relative h-auto w-full max-w-[22rem] drop-shadow-2xl sm:max-w-sm lg:max-w-[34rem]"
+            />
           </div>
         </div>
       </section>
