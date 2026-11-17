@@ -1,21 +1,11 @@
 import type { NextConfig } from "next";
 
+// Site 100% estático: gera a pasta "out" (HTML/CSS/JS/imagens), hospedável em Cloudflare Pages, Vercel etc.
 const nextConfig: NextConfig = {
+  output: "export",
   poweredByHeader: false,
   trailingSlash: true,
-  images: { formats: ["image/avif", "image/webp"] },
-  async headers() {
-    return [
-      {
-        source: "/:path*",
-        headers: [
-          { key: "X-Content-Type-Options", value: "nosniff" },
-          { key: "X-Frame-Options", value: "SAMEORIGIN" },
-          { key: "Referrer-Policy", value: "strict-origin-when-cross-origin" },
-        ],
-      },
-    ];
-  },
+  images: { loader: "custom", loaderFile: "./src/lib/image-loader.ts" },
 };
 
 export default nextConfig;
