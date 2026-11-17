@@ -13,8 +13,11 @@ export const SITE = {
 export const NAV = [
   { label: "Início", href: "/" },
   { label: "Serviços", href: "/servicos/" },
+  { label: "Sobre", href: "/sobre/" },
   { label: "Contato", href: "/contato/" },
 ];
+
+export const GOOGLE_PROFILE = "https://www.google.com/maps?cid=12924717879051113522";
 
 export const abs = (path: string) => `${SITE.url}${path}`;
 

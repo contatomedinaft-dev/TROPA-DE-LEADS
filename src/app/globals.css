@@ -2,7 +2,19 @@
 
 @theme {
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  /* Paleta azul-marinho: substitui os cinzas-azulados padrão */
+  --color-slate-950: #06143a;
+  --color-slate-900: #0a1d4e;
+  --color-slate-800: #11296a;
+  --color-slate-700: #1c3a84;
 }
 
-html { scroll-behavior: smooth; }
+html {
+  font-size: 112.5%; /* 18px: textos um pouco maiores em todo o site */
+  scroll-behavior: smooth;
+}
+body {
+  background: linear-gradient(180deg, #06143a 0%, #0a1d4e 55%, #06143a 100%);
+  background-attachment: fixed;
+}
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }

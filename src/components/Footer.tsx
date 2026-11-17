@@ -4,7 +4,7 @@ import { NAV, SITE } from "@/lib/site";
 
 export function Footer() {
   return (
-    <footer className="border-t border-slate-900 bg-slate-950 py-12 text-sm text-slate-400">
+    <footer className="bg-slate-950 py-12 text-sm text-slate-400">
       <div className="mx-auto grid max-w-7xl gap-10 px-6 sm:grid-cols-2 lg:grid-cols-3 lg:px-8">
         <div>
           <p className="text-base font-bold text-white">{SITE.name}</p>

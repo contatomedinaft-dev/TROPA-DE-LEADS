@@ -23,7 +23,7 @@ export default function ServicosPage() {
           </p>
           <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
             {services.map((s) => (
-              <Link key={s.slug} href={`/servicos/${s.slug}/`} className="group flex flex-col rounded-2xl border border-slate-800 bg-slate-900/50 p-6 transition hover:border-slate-600">
+              <Link key={s.slug} href={`/servicos/${s.slug}/`} className="group flex flex-col rounded-2xl bg-white/5 p-6 transition hover:border-slate-600">
                 <h2 className="text-base font-bold">{s.name}</h2>
                 <p className="mt-3 flex-grow text-sm leading-relaxed text-slate-400">{s.short}</p>
                 <span className="mt-6 text-sm font-semibold text-blue-400 group-hover:underline">Ver detalhes →</span>

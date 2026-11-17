@@ -74,7 +74,7 @@ export default async function ServicePage({ params }: { params: Promise<Params> 
           <div>
             <h2 className="text-xl font-bold">Problemas que esse serviço resolve</h2>
             <ul className="mt-5 space-y-3 text-slate-300">
-              {s.problems.map((p) => (<li key={p} className="flex gap-3"><span className="text-purple-400" aria-hidden>•</span>{p}</li>))}
+              {s.problems.map((p) => (<li key={p} className="flex gap-3"><span className="text-sky-300" aria-hidden>•</span>{p}</li>))}
             </ul>
           </div>
           <div>
@@ -91,7 +91,7 @@ export default async function ServicePage({ params }: { params: Promise<Params> 
           <h2 className="text-2xl font-bold">O que está incluído</h2>
           <dl className="mt-8 grid gap-6 md:grid-cols-2">
             {s.scope.map((x) => (
-              <div key={x.title} className="rounded-2xl border border-slate-800 bg-slate-900/50 p-6">
+              <div key={x.title} className="rounded-2xl bg-white/5 p-6">
                 <dt className="font-semibold text-white">{x.title}</dt>
                 <dd className="mt-2 text-sm leading-relaxed text-slate-400">{x.text}</dd>
               </div>
@@ -124,7 +124,7 @@ export default async function ServicePage({ params }: { params: Promise<Params> 
       <section className="py-16">
         <div className="mx-auto max-w-3xl px-6 lg:px-8">
           <h2 className="text-2xl font-bold">Perguntas frequentes</h2>
-          <div className="mt-8 divide-y divide-slate-800 border-y border-slate-800">
+          <div className="mt-8 divide-y divide-white/10">
             {s.faq.map((f) => (
               <details key={f.q} className="group py-5">
                 <summary className="cursor-pointer list-none font-semibold text-white">{f.q}</summary>

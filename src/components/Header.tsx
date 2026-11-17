@@ -4,10 +4,10 @@ import { NAV } from "@/lib/site";
 
 export function Header() {
   return (
-    <header className="sticky top-0 z-40 border-b border-slate-800 bg-slate-950/90 backdrop-blur">
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-3 lg:px-8">
+    <header className="sticky top-0 z-40 bg-slate-950/85 backdrop-blur">
+      <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-2 lg:px-8">
         <Link href="/" aria-label="Tropa de Leads — página inicial">
-          <Image src="/logo.png" alt="Tropa de Leads" width={140} height={48} className="h-10 w-auto mix-blend-screen" priority />
+          <Image src="/logo.png" alt="Tropa de Leads" width={200} height={80} className="h-20 w-auto mix-blend-screen" priority />
         </Link>
         <nav aria-label="Principal" className="hidden gap-8 text-sm font-medium text-slate-200 md:flex">
           {NAV.map((n) => (

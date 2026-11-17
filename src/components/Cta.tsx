@@ -34,7 +34,7 @@ export function FinalCta({
   where: string;
 }) {
   return (
-    <section className="bg-gradient-to-br from-blue-700 to-purple-800 px-6 py-20 text-center">
+    <section className="bg-gradient-to-br from-blue-700 to-blue-900 px-6 py-20 text-center">
       <div className="mx-auto max-w-3xl">
         <h2 className="text-3xl font-bold text-white lg:text-4xl">{title}</h2>
         <p className="mt-5 text-lg text-blue-100">{text}</p>
