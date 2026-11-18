@@ -1,6 +1,6 @@
 export const SITE = {
   name: "Tropa de Leads",
-  url: (process.env.NEXT_PUBLIC_SITE_URL || "https://tropadeleads.vercel.app").replace(/\/$/, ""),
+  url: (process.env.NEXT_PUBLIC_SITE_URL || "https://www.tropadeleads.com.br").replace(/\/$/, ""),
   whatsapp: process.env.NEXT_PUBLIC_WHATSAPP || "5519983384993",
   phoneLabel: "(19) 98338-4993",
   email: "contato.medinaft@gmail.com",
