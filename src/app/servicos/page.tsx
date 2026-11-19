@@ -3,12 +3,14 @@ import Link from "next/link";
 import { services } from "@/content/services";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { FinalCta } from "@/components/Cta";
+import { og } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Serviços de marketing digital, Google e produção de conteúdo",
   description:
     "Conheça os serviços da Tropa de Leads: tráfego pago, redes sociais, Google Meu Negócio, SEO, criação de sites, fotografia, vídeo e consultoria.",
   alternates: { canonical: "/servicos/" },
+  openGraph: og("/servicos/", "Serviços de marketing digital, Google e produção de conteúdo | Tropa de Leads", "Conheça os serviços da Tropa de Leads: tráfego pago, redes sociais, Google Meu Negócio, SEO, criação de sites, fotografia, vídeo e consultoria."),
 };
 
 export default function ServicosPage() {

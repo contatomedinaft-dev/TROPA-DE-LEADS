@@ -2,12 +2,13 @@ import type { Metadata } from "next";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { ContactForm } from "@/components/ContactForm";
 import { WhatsAppButton } from "@/components/Cta";
-import { SITE } from "@/lib/site";
+import { SITE, og } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Contato e solicitação de orçamento",
   description: "Fale com a Tropa de Leads pelo WhatsApp ou pelo formulário e conte o que sua empresa precisa.",
   alternates: { canonical: "/contato/" },
+  openGraph: og("/contato/", "Contato e solicitação de orçamento | Tropa de Leads", "Fale com a Tropa de Leads pelo WhatsApp ou pelo formulário e conte o que sua empresa precisa."),
 };
 
 export default function ContatoPage() {

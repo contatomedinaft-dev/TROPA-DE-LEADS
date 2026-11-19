@@ -3,13 +3,14 @@ import Image from "next/image";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { FinalCta } from "@/components/Cta";
 import { GoogleBadge } from "@/components/GoogleBadge";
-import { SITE } from "@/lib/site";
+import { SITE, og } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Sobre a Tropa de Leads",
   description:
     "Conheça a Tropa de Leads: marketing digital com foco em conversão, unindo tráfego pago, Google, conteúdo, fotografia, vídeo e tecnologia. Atendimento em Campinas/SP e região.",
   alternates: { canonical: "/sobre/" },
+  openGraph: og("/sobre/", "Sobre a Tropa de Leads", "Conheça a Tropa de Leads: marketing digital com foco em conversão. Atendimento em Campinas/SP e região."),
 };
 
 const pillars = [

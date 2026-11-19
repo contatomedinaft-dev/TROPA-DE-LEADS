@@ -24,3 +24,16 @@ export const abs = (path: string) => `${SITE.url}${path}`;
 export function whatsappUrl(message: string) {
   return `https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent(message)}`;
 }
+
+/** OpenGraph por página: o Next substitui o objeto inteiro do layout, então repetimos os campos comuns. */
+export function og(path: string, title: string, description: string) {
+  return {
+    type: "website" as const,
+    locale: "pt_BR",
+    siteName: SITE.name,
+    title,
+    description,
+    url: path,
+    images: [{ url: "/hero-bg.jpg", alt: SITE.name }],
+  };
+}

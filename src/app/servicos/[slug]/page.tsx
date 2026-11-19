@@ -5,7 +5,7 @@ import { getService, services } from "@/content/services";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { FinalCta, WhatsAppButton } from "@/components/Cta";
 import { JsonLd } from "@/components/JsonLd";
-import { SITE, abs } from "@/lib/site";
+import { SITE, abs, og } from "@/lib/site";
 
 type Params = { slug: string };
 
@@ -23,7 +23,7 @@ export async function generateMetadata({ params }: { params: Promise<Params> }):
     title: s.seoTitle,
     description: s.seoDescription,
     alternates: { canonical: `/servicos/${s.slug}/` },
-    openGraph: { title: s.seoTitle, description: s.seoDescription, url: `/servicos/${s.slug}/`, type: "website" },
+    openGraph: og(`/servicos/${s.slug}/`, s.seoTitle, s.seoDescription),
   };
 }
 
